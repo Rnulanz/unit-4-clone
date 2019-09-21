@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE GOES HERE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/CSS/style.css"/>
+  </head>
+  
+  <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="jumbotron1">
+              <h1 class="display-4">Crystals Collector!!!</h1>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+              <div class="col-12">
+                  <div class="jumbotron2">
+                    <h1>Rules</h1>
+                    <hr>
+                      <ul>
+                      <li>You will be given a random number at the start of the game.</li>
+                      <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+                      <li>You win the game by matching your total score to the random number that was provide win the game starts. You lose<br>
+                        the game if your total score goes above the random number.</li>
+                      <li>The value of each crystal is hidden from you, until you click on it and reveal the value.</li>
+                      <li>Each time the game restarts the value of each crystal changes.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+            <div class="row">
+                <div id="ranScore"class="col-6">
+                  <h1>Random Score!</h1>
+                  <hr>
+                </div>
+                <div id="winlose"class="col-6">
+                  <ul>
+                    <li>Wins:</li>
+                    <li>Losses:</li>
+                  </ul>
+                </div>
+            </div>
+                <div class="row">
+                      <div class="col-3">
+                          <button type="button-red" class="btn btn-danger"><img class="ruby" src="assets/images/ruby-oval-red.jpg"></button>
+                      </div>
+                      <div class="col-3">
+                          <button type="button-blue" class="btn btn-primary "><img class="diamond" src="assets/images/diamond-image.jpg"></button>
+                      </div>
+                      <div class="col-3">
+                          <button type="button-yellow" class="btn btn-warning"><img class="sapphire" src="assets/images/yellowjewel.jpg"></button>
+                      </div>
+                      <div class="col-3">
+                          <button type="button-green" class="btn btn-success"><img class="emerald" src="assets/images/emerald_green.jpg"></button>
+                      </div>
+                </div>
+                    <div class="row">
+                      <div id="yourScore" class="col-6">
+                        <h1>Your total score is:</h1>
+                        <hr>
+                      </div>
+                    </div>
+      </div>
+    
+    <script type="text/javascript">
+      
+      $(document).ready(function(){
+        
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+.jumbotron1{
+    background:yellow;
+    color: red;
+    font-size: 36px;
+    text-align: center;
+}
+
+.jumbotron2{
+    background:red;
+    color: yellow;
+    font-size: 36px;
+    text-align: center;
+
+}
+
+
+#ranScore{
+    background: green;
+}
+
+#winlose{
+    background: blue;
+    font-size: 20px;
+}
+
+.ruby, .diamond, .sapphire, .emerald{
+    height: 250px;
+    width: 250px;
+}
+
+#yourScore{
+    background: yellow;
+    font-size: 18px;
+}
