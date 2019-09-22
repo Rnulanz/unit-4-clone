@@ -13,8 +13,11 @@
 
 }
 
-
 #ranScore{
+    font-size: 40px;
+}
+
+#computer{
     background: green;
 }
 
@@ -23,12 +26,18 @@
     font-size: 20px;
 }
 
-.ruby, .diamond, .sapphire, .emerald{
-    height: 250px;
-    width: 250px;
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#yourScore{
+.crystal{
+border: 1px solid green;
+height: 180px;
+width: 180px;
+}
+.yourScore{
     background: yellow;
     font-size: 18px;
 }
