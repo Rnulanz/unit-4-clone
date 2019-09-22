@@ -1,64 +1,65 @@
 $(document).ready(function(){
 
-
+var reStart = function(){
+    $(".crystals").empty();
+    $("#yourScore").empty();
 // computer random
-var computerRandom = computerFinal();
-$("#ranScore").text(computerRandom);
-
-function computerFinal(){
-  return Math.floor((Math.random()*102) + 19);
-
-}
-   
-
-
+computerRandom = Math.floor((Math.random()*102) + 19);
+ $("#ranScore").text(computerRandom);
 // console.log(computerRandom());
 
 //  Crystal Random
-var starterNumber = $("#yourScore")
-crystalNumber = 0;
-
 
 for(var i = 0; i < 4; i++){
 
-    var random = Math.floor((Math.random()* 12) + 1);
+    var randomCrystalNum = Math.floor((Math.random()* 12) + 1);
     // console.log(random);
-        var crystal = $("<div>");
-        crystal.attr({
-            "class": 'crystal',
-            "data-random": random,
+       
+        var crystal = $("<img>");
+            crystal.attr({
+                "class": 'crystal',
+                "data-random": randomCrystalNum,
+                "src": image + 'background-image'
         });
+        
+    
     $(".crystals").append(crystal);
 }
+}
 // Conditional Statements
-
-$(".crystal").on('click', function(){
-    var num = parseInt($(this).attr('data-random'));
-    crystalNumber += num; 
-    starterNumber.text(crystalNumber);
-    // console.log(crystalNumber)
-   if(crystalNumber === computerRandom){
-       wins.text("Wins: " + win++);
+reStart();
+$(document).on('click',".crystal", function(){
+    var addCrystalRandom = parseInt($(this).attr('data-random'));
+    playerScore += addCrystalRandom; 
+    $("#yourScore").text(playerScore);
+    // console.log(playerScore)
+   if(playerScore === computerRandom){
+       wins.text("Wins: " + ++win);
+       playerScore = 0;
        alert("YOU WON!!!");
-       resetGame();
-   }else if(crystalNumber > computerRandom){
-        loss.text("Losses: " + losses++);
+       reStart();
+      
+   }else if(playerScore > computerRandom){
+        loss.text("Losses: " + ++losses);
+        playerScore = 0;
         alert("YOU LOST!!");
-        resetGame();
+        reStart();
+       
    }
 
 });
 
+
+var playerScore = 0;
+
 var wins = $("#winner")
 var loss = $("#loser")
-var win= 1;
-var losses = 1 ;
+var win = 0;
+var losses = 0;
 
-function resetGame() {
-    num = 0;
-    crystalNumber = 0;
-    computerRandom = 0;
 
-}
-
-});
+var image =["assets/images/diamond-image.jpg",
+            "assets/images/emerald_green.jpg" ,
+            "assets/images/ruby-oval-red.jpg",
+            "assets/images/yellowjewel.jpg"]
+});     

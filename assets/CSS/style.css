@@ -37,7 +37,15 @@ border: 1px solid green;
 height: 180px;
 width: 180px;
 }
+
+image{
+    
+}
 .yourScore{
     background: yellow;
     font-size: 18px;
+}
+
+#yourScore{
+    font-size: 28px;
 }
