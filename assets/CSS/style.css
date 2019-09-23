@@ -19,32 +19,38 @@
 
 #computer{
     background: green;
+    color: red
 }
 
 #winlose{
     background: blue;
     font-size: 20px;
+    color: yellow;
 }
 
 .crystals{
     display: flex;
     justify-content: space-between; 
     align-items: center;
+    background-color: whitesmoke;
 }
 
 .crystalStyle{
-border: 10px solid red;
+border: 1px solid red;
 height: 180px;
 width: 180px;
+
 
 }
     
 
 .yourScore{
-    background: yellow;
+    background-color:blue;
     font-size: 18px;
+     color: yellow
 }
 
 #yourScore{
     font-size: 28px;
+    color: yellow;
 }
