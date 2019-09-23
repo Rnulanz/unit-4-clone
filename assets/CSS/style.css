@@ -28,14 +28,15 @@
 
 .crystals{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; 
     align-items: center;
 }
 
 .crystalStyle{
-border: 1px solid red;
+border: 10px solid red;
 height: 180px;
 width: 180px;
+
 }
     
 
