@@ -36,7 +36,7 @@ for(var i = 0; i < 4; i++){
 }
 // Conditional Statements
 reStart();
-$(document).on('click',".crystal", function(){
+$(document).on('click',".crystalStyle", function(){
     var addCrystalRandom = parseInt($(this).attr('numberRandom'));
     playerScore += addCrystalRandom; 
     $("#yourScore").text(playerScore);
