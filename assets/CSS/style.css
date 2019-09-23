@@ -32,15 +32,13 @@
     align-items: center;
 }
 
-.crystal{
+.crystalStyle{
 border: 1px solid red;
 height: 180px;
 width: 180px;
 }
-
-image{
     
-}
+
 .yourScore{
     background: yellow;
     font-size: 18px;
