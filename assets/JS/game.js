@@ -3,8 +3,19 @@ $(document).ready(function(){
 var reStart = function(){
     $(".crystals").empty();
     $("#yourScore").empty();
+
+    var image = ["assets/images/diamond-image.jpg",
+                 "assets/images/emerald_green.jpg" ,
+                "assets/images/ruby-oval-red.jpg",
+                "assets/images/yellowjewel.jpg"]
+
+
+
 // computer random
-computerRandom = Math.floor((Math.random()*102) + 19);
+computerRandom = Math.floor((Math.random()*120) + 19);
+    while (computerRandom > 120){
+        computerRandom = Math.floor((Math.random()*120) + 19);
+    }
  $("#ranScore").text(computerRandom);
 // console.log(computerRandom());
 
@@ -18,8 +29,8 @@ for(var i = 0; i < 4; i++){
         var crystal = $("<img>");
             crystal.attr({
                 "class": 'crystal',
-                "data-random": randomCrystalNum,
-                "src": image + 'background-image'
+                "numberRandom": randomCrystalNum,
+                "src": image[i],
         });
         
     
@@ -29,7 +40,7 @@ for(var i = 0; i < 4; i++){
 // Conditional Statements
 reStart();
 $(document).on('click',".crystal", function(){
-    var addCrystalRandom = parseInt($(this).attr('data-random'));
+    var addCrystalRandom = parseInt($(this).attr('numberRandom'));
     playerScore += addCrystalRandom; 
     $("#yourScore").text(playerScore);
     // console.log(playerScore)
@@ -56,10 +67,4 @@ var wins = $("#winner")
 var loss = $("#loser")
 var win = 0;
 var losses = 0;
-
-
-var image =["assets/images/diamond-image.jpg",
-            "assets/images/emerald_green.jpg" ,
-            "assets/images/ruby-oval-red.jpg",
-            "assets/images/yellowjewel.jpg"]
 });     

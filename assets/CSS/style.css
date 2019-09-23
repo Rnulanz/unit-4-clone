@@ -8,7 +8,7 @@
 .jumbotron2{
     background:red;
     color: yellow;
-    font-size: 36px;
+    font-size: 34px;
     text-align: center;
 
 }
@@ -33,7 +33,7 @@
 }
 
 .crystal{
-border: 1px solid green;
+border: 1px solid red;
 height: 180px;
 width: 180px;
 }
